@@ -120,10 +120,10 @@ function assignPalette(h){
   } else if(h > 7  && h < 17){
     return(day_palette);
     
-  } else if(h >= 17 && h <= 20){
+  } else if(h >= 17 && h <= 18){
     return(night_palette);
     
-  } else if(h > 20){
+  } else if(h > 18){
     return(night_palette);
     
   }
