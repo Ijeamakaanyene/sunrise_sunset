@@ -104,7 +104,7 @@ function assignColorProb(h){
   } else if(h >= 17 && h <= 18){
     return(sunset_prob);
     
-  } else if(h > 20){
+  } else if(h > 18){
     return(night_prob);
   }
 }
