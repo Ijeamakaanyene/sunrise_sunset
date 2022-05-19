@@ -7,6 +7,10 @@ function setup() {
   noLoop();
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
   background('#ffffff');
   
@@ -94,10 +98,10 @@ function assignColorProb(h){
   } else if(h >= 6 && h <= 7){
     return(sunrise_prob);
     
-  } else if(h > 7  && h < 19){
+  } else if(h > 7  && h < 17){
     return(day_prob);
     
-  } else if(h >= 19 && h <= 20){
+  } else if(h >= 17 && h <= 18){
     return(sunset_prob);
     
   } else if(h > 20){
@@ -114,20 +118,13 @@ function assignPalette(h){
   if(h < 6){
     return(night_palette);
     
-  } else if(h >= 6 && h <= 7){
+  } else if(h >= 6 && h < 17){
     return(day_palette);
     
-  } else if(h > 7  && h < 17){
-    return(day_palette);
-    
-  } else if(h >= 17 && h <= 18){
-    return(night_palette);
-    
-  } else if(h > 18){
+  } else if(h >= 17){
     return(night_palette);
     
   }
-  
   
 }
 
