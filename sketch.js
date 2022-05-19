@@ -11,19 +11,15 @@ function draw() {
   background('#ffffff');
   
   
-  
-  //let palette = ["#000330", "#f18f15", "#f5e700"];
-  
   // setting size of small multiple circles
   let nx = width/s;
   let ny = height/s;
   
   // determining angle of sun
-  let h = 20;
+  let h = hour();
   let xm = map(h, 0, 23, 
                width + ((width/8)*6),
-               0 - (width/8)*4);
-  //let xm = map(h, 0, 23, width, 0);
+               0 - (width/8)*6);
   let ym = map(h, 0, 23, 0, TWO_PI);
   
   let sunX0 = xm;
@@ -121,10 +117,10 @@ function assignPalette(h){
   } else if(h >= 6 && h <= 7){
     return(day_palette);
     
-  } else if(h > 7  && h < 19){
+  } else if(h > 7  && h < 17){
     return(day_palette);
     
-  } else if(h >= 19 && h <= 20){
+  } else if(h >= 17 && h <= 20){
     return(night_palette);
     
   } else if(h > 20){
